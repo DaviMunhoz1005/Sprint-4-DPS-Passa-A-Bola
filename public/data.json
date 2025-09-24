@@ -1,0 +1,112 @@
+{
+  "projeto": {
+    "titulo": "Modelagem Matemática no Futebol Feminino: Engajamento e Desempenho",
+    "autores": ["Davi Munhoz", "Vinicius Mafra", "Mariana França", "Larissa Shiba", "Gabriel Ciriaco"],
+    "descricao": "Este trabalho propõe a aplicação de conceitos de funções, limites e derivadas em dois contextos distintos e complementares do futebol feminino: Marketing digital e Desempenho físico."
+  },
+  "funcoes": {
+    "crescimento_seguidores": {
+      "exponencial": {
+        "formula": "f(t) = 5000 * 1.08^t",
+        "descricao": "Modelo exponencial: crescimento contínuo sem considerar saturação",
+        "limite": "∞",
+        "dados": [
+          {"tempo": 0, "seguidores": 5000},
+          {"tempo": 3, "seguidores": 6299},
+          {"tempo": 6, "seguidores": 7937},
+          {"tempo": 9, "seguidores": 10007},
+          {"tempo": 12, "seguidores": 12618},
+          {"tempo": 15, "seguidores": 15910},
+          {"tempo": 18, "seguidores": 20069},
+          {"tempo": 21, "seguidores": 25310},
+          {"tempo": 24, "seguidores": 31930}
+        ]
+      },
+      "logistico": {
+        "formula": "f(t) = 100000 / (1 + e^(-0.3(t-10)))",
+        "descricao": "Modelo logístico: crescimento com limite máximo de seguidores",
+        "limite": "100000",
+        "dados": [
+          {"tempo": 0, "seguidores": 4743},
+          {"tempo": 3, "seguidores": 11731},
+          {"tempo": 6, "seguidores": 26894},
+          {"tempo": 9, "seguidores": 52497},
+          {"tempo": 12, "seguidores": 78583},
+          {"tempo": 15, "seguidores": 92414},
+          {"tempo": 18, "seguidores": 97069},
+          {"tempo": 21, "seguidores": 98901},
+          {"tempo": 24, "seguidores": 99502}
+        ]
+      }
+    },
+    "desempenho_fisico": {
+      "posicao": {
+        "formula": "s(t) = 0.9t² + 1.6t - 0.03t³",
+        "descricao": "Posição da jogadora ao longo do tempo",
+        "dados": [
+          {"tempo": 0, "posicao": 0},
+          {"tempo": 1, "posicao": 2.47},
+          {"tempo": 2, "posicao": 6.04},
+          {"tempo": 3, "posicao": 10.89},
+          {"tempo": 4, "posicao": 17.2},
+          {"tempo": 5, "posicao": 25.25},
+          {"tempo": 6, "posicao": 35.22},
+          {"tempo": 7, "posicao": 47.29},
+          {"tempo": 8, "posicao": 61.64},
+          {"tempo": 9, "posicao": 78.45},
+          {"tempo": 10, "posicao": 97.9}
+        ]
+      },
+      "velocidade": {
+        "formula": "v(t) = 1.8t + 1.6 - 0.09t²",
+        "descricao": "Velocidade como derivada da posição",
+        "interpretacao": {
+          "v_2s": "6.2 m/s - pico de velocidade inicial",
+          "v_6s": "3.76 m/s - queda na velocidade por fadiga"
+        },
+        "dados": [
+          {"tempo": 0, "velocidade": 1.6},
+          {"tempo": 1, "velocidade": 3.31},
+          {"tempo": 2, "velocidade": 4.84},
+          {"tempo": 3, "velocidade": 6.19},
+          {"tempo": 4, "velocidade": 7.36},
+          {"tempo": 5, "velocidade": 8.35},
+          {"tempo": 6, "velocidade": 9.16},
+          {"tempo": 7, "velocidade": 9.79},
+          {"tempo": 8, "velocidade": 10.24},
+          {"tempo": 9, "velocidade": 10.51},
+          {"tempo": 10, "velocidade": 10.6}
+        ]
+      },
+      "aceleracao": {
+        "formula": "a(t) = 1.8 - 0.18t",
+        "descricao": "Aceleração como derivada da velocidade - diminui linearmente com o tempo",
+        "interpretacao": "Evidencia perda progressiva de explosão muscular durante o esforço",
+        "dados": [
+          {"tempo": 0, "aceleracao": 1.8},
+          {"tempo": 1, "aceleracao": 1.62},
+          {"tempo": 2, "aceleracao": 1.44},
+          {"tempo": 3, "aceleracao": 1.26},
+          {"tempo": 4, "aceleracao": 1.08},
+          {"tempo": 5, "aceleracao": 0.9},
+          {"tempo": 6, "aceleracao": 0.72},
+          {"tempo": 7, "aceleracao": 0.54},
+          {"tempo": 8, "aceleracao": 0.36},
+          {"tempo": 9, "aceleracao": 0.18},
+          {"tempo": 10, "aceleracao": 0}
+        ]
+      }
+    }
+  },
+  "interpretacoes": {
+    "crescimento_seguidores": {
+      "exponencial": "Mostra crescimento ilimitado, útil para projeções iniciais",
+      "logistico": "Representa saturação realista de seguidores, permitindo definir metas alcançáveis"
+    },
+    "desempenho_fisico": {
+      "velocidade": "Pico inicial seguido de queda por fadiga",
+      "aceleracao": "Desaceleração gradual reflete perda de explosão muscular"
+    }
+  }
+}
+
