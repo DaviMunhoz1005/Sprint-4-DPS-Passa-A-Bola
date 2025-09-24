@@ -35,7 +35,6 @@ Aplicação React que demonstra a aplicação de conceitos de funções, limites
 ## Como Executar
 
 ```bash
-cd futebol-feminino-matematica
 pnpm install
 pnpm run dev
 ```
